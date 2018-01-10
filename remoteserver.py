@@ -6,7 +6,7 @@ import webbrowser
 async def server(reader, writer):
   url = await reader.read()
   url = url.decode('gb18030')
-  print(f'open url {url}')
+  print(f'open url {url}', flush=True)
   webbrowser.open(url)
   writer.write_eof()
 
