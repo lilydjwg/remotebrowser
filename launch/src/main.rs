@@ -30,19 +30,18 @@ fn main2() -> Result<()> {
   let url = args().nth(1).ok_or("no url given")?;
   if let Err(e) = open_remote(&url) {
     eprintln!("open remotely failed: {:?}", e);
+    println!("Press Enter to open locally.");
+    stdin().read_line(&mut String::new())?;
+    open_local(&url)
+  } else {
+    Ok(())
   }
-  println!("Press Enter to open locally.");
-  stdin().read_line(&mut String::new())?;
-  open_local(&url)
 }
 
 fn main() {
-  match main2() {
-    Ok(()) => {},
-    Err(e) => {
-      eprintln!("Error: {:?}", e);
-      println!("Press Enter to exit.");
-      stdin().read_line(&mut String::new()).unwrap();
-    },
-  };
+  if let Err(e) = main2() {
+    eprintln!("Error: {:?}", e);
+    println!("Press Enter to exit.");
+    stdin().read_line(&mut String::new()).unwrap();
+  }
 }
