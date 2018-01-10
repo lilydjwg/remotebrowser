@@ -1,0 +1,65 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser]
+@="RemoteBrowser"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\Capabilities]
+"ApplicationName"="RemoteBrowser"
+"ApplicationIcon"="C:\\RemoteBrowser\\launch.exe,0"
+"ApplicationDescription"="RemoteBrowser"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\Capabilities\StartMenu]
+"StartMenuInternet"="RemoteBrowser"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\Capabilities\URLAssociations]
+"https"="RemoteBrowserHTML"
+"http"="RemoteBrowserHTML"
+"ftp"="RemoteBrowserHTML"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\DefaultIcon]
+@="C:\\RemoteBrowser\\launch.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\InstallInfo]
+"IconsVisible"=dword:00000001
+"ShowIconsCommand"="\"C:\\RemoteBrowser\\launch.exe\" --show-icons"
+"HideIconsCommand"="\"C:\\RemoteBrowser\\launch.exe\" --hide-icons"
+"ReinstallCommand"="\"C:\\RemoteBrowser\\launch.exe\" --make-default-browser"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\shell]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\shell\open]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\RemoteBrowser\shell\open\command]
+@="\"C:\\RemoteBrowser\\launch.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
+"RemoteBrowser"="SOFTWARE\\Clients\\StartMenuInternet\\RemoteBrowser\\Capabilities"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice]
+"Progid"="RemoteBrowserHTML"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice]
+"Progid"="RemoteBrowserHTML"
+
+[HKEY_CLASSES_ROOT\RemoteBrowserHTML]
+@="RemoteBrowser"
+"FriendlyTypeName"="RemoteBrowser"
+"URL Protocol"=""
+"EditFlags"=dword:00000002
+
+[HKEY_CLASSES_ROOT\RemoteBrowserHTML\DefaultIcon]
+@="C:\\RemoteBrowser\\launch.exe,0"
+
+[HKEY_CLASSES_ROOT\RemoteBrowserHTML\shell]
+@="open"
+
+[HKEY_CLASSES_ROOT\RemoteBrowserHTML\shell\open]
+
+[HKEY_CLASSES_ROOT\RemoteBrowserHTML\shell\open\command]
+@="\"C:\\RemoteBrowser\\launch.exe\" \"%1\""

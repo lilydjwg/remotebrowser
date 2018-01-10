@@ -1,0 +1,11 @@
+[package]
+name = "launch"
+version = "0.1.0"
+authors = ["lilydjwg <lilydjwg@gmail.com>"]
+build = "build.rs"
+
+[dependencies]
+error-chain = "*"
+
+[profile.release]
+lto = true
